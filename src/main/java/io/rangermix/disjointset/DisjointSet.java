@@ -3,12 +3,12 @@ package io.rangermix.disjointset;
 import java.util.*;
 
 public class DisjointSet<E> {
-    public static class Node<E> {
+    private static class Node<E> {
         Node<E> parent;
         List<E> set;
         int rank;
 
-        public Node(E e) {
+        Node(E e) {
             this.parent = this;
             this.rank = 0;
             this.set = new ArrayList<>();
